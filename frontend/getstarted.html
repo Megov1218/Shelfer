@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelfer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Shelfer</h2>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="scan">
+            <div class="upload">
+                <!-- Product Name Extraction -->
+                <div class="name">
+                    <h3 class="describe">Upload an image to extract the <i>NAME</i> of the product.</h3>  
+                    <br>
+                    <input type="file" id="imageInputName" class="ipname">
+                   
+                    <br>
+
+                    <input type="text" id="productName" placeholder="Extracted Name" class="extract" readonly>
+                    <br>
+                    <button class="img-name" onclick="uploadImage('name')">Upload Image</button>
+                </div>
+                <br>
+                <!-- Expiry Date Extraction -->
+                <div class="date">
+                    <h3 class="describe">Upload an image to extract the <i>EXPIRY DATE</i> of the product.</h3> 
+                    <br> 
+                    <input type="file" id="imageInputDate" class="ipdate">
+                    <br>
+                    <input type="text" id="productExpiryDate" placeholder="Extracted Expiry Date" class="extract" readonly >
+                    <br>
+                    <button class="img-date" onclick="uploadImage('date')">Upload Image</button>
+                </div>
+            </div>
+
+            <!-- Display Extracted Data -->
+            <div class="display">
+                <div class="name">
+                    <h3 class="describe">Product Name:</h3>  
+                    <input type="text" id="confirmProductName" placeholder="Confirm Product Name" class="cnname">
+                    <button class="confirm-name" onclick="confirmProduct()">Confirm</button>
+                </div>
+                <br>
+                <div class="date">
+                    <h3 class="describe">Expiry Date:</h3> 
+                    <input type="text" id="confirmExpiryDate" placeholder="Confirm Expiry Date" class="cndate">
+                    <button class="confirm-date" onclick="confirmProduct()">Confirm</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact-us" id="contact">
+            <div class="section-content">
+                <h2 class="contact-title">Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Pimpri-Chinchwad Pune 411018</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 xxxxx xxxxx</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>support@shelfer.com</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
